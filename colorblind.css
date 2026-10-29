@@ -1,0 +1,54 @@
+/*
+ * GitHub "protanopia & deuteranopia" style palette for GitLab.
+ * Green -> blue, red -> orange. Everything is scoped to html.cb-mode so the
+ * popup toggle can switch it off without reloading.
+ */
+
+/* ---- Palette remap ----
+ * GitLab's status icons, badges, alerts, buttons and success/danger text are
+ * all built from the green/red palette, so swapping the palette at the root
+ * recolors them consistently in both light and dark mode. */
+html.cb-mode {
+  --gl-color-green-50: var(--gl-color-blue-50) !important;
+  --gl-color-green-100: var(--gl-color-blue-100) !important;
+  --gl-color-green-200: var(--gl-color-blue-200) !important;
+  --gl-color-green-300: var(--gl-color-blue-300) !important;
+  --gl-color-green-400: var(--gl-color-blue-400) !important;
+  --gl-color-green-500: var(--gl-color-blue-500) !important;
+  --gl-color-green-600: var(--gl-color-blue-600) !important;
+  --gl-color-green-700: var(--gl-color-blue-700) !important;
+  --gl-color-green-800: var(--gl-color-blue-800) !important;
+  --gl-color-green-900: var(--gl-color-blue-900) !important;
+  --gl-color-green-950: var(--gl-color-blue-950) !important;
+
+  --gl-color-red-50: var(--gl-color-orange-50) !important;
+  --gl-color-red-100: var(--gl-color-orange-100) !important;
+  --gl-color-red-200: var(--gl-color-orange-200) !important;
+  --gl-color-red-300: var(--gl-color-orange-300) !important;
+  --gl-color-red-400: var(--gl-color-orange-400) !important;
+  --gl-color-red-500: var(--gl-color-orange-500) !important;
+  --gl-color-red-600: var(--gl-color-orange-600) !important;
+  --gl-color-red-700: var(--gl-color-orange-700) !important;
+  --gl-color-red-800: var(--gl-color-orange-800) !important;
+  --gl-color-red-900: var(--gl-color-orange-900) !important;
+  --gl-color-red-950: var(--gl-color-orange-950) !important;
+
+  /* Older Bootstrap-era variables still used by some pages. */
+  --green-50: var(--gl-color-blue-50) !important;
+  --green-100: var(--gl-color-blue-100) !important;
+  --green-500: var(--gl-color-blue-500) !important;
+  --green-600: var(--gl-color-blue-600) !important;
+  --green-700: var(--gl-color-blue-700) !important;
+  --red-50: var(--gl-color-orange-50) !important;
+  --red-100: var(--gl-color-orange-100) !important;
+  --red-500: var(--gl-color-orange-500) !important;
+  --red-600: var(--gl-color-orange-600) !important;
+  --red-700: var(--gl-color-orange-700) !important;
+  --green: var(--gl-color-blue-500) !important;
+  --red: var(--gl-color-orange-500) !important;
+  --success: var(--gl-color-blue-500) !important;
+  --danger: var(--gl-color-orange-500) !important;
+}
+
+/* Diffs keep their normal colors: content.js restores the original palette
+ * inside them, read from the page so it matches the theme and GitLab version. */

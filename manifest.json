@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "GitLab Colorblind Mode",
+  "version": "0.1.0",
+  "description": "GitHub-style colorblind palette for GitLab: blue for additions/success, orange for deletions/failure.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gitlab-colorblind@local",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "GitLab Colorblind Mode",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gitlab.com/*"
+      ],
+      "css": ["colorblind.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
